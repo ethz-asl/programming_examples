@@ -10,8 +10,8 @@
   <buildtool_depend>catkin</buildtool_depend>
   <buildtool_depend>catkin_simple</buildtool_depend>
 
-  <depend>eigen_catkin</depend>
-
-
+  <depend>rocket</depend>
+  <depend>python_module</depend>
+  <depend>numpy_eigen</depend>
 </package>
 

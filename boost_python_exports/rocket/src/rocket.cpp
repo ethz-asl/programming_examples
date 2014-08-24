@@ -66,6 +66,8 @@ void Booster::setNumBoosts(unsigned nb) {
   num_boosts_ = nb;
 }
 
-
+std::string Booster::name() const {
+  return "Booster";
+}
 
 } // namespace rocket

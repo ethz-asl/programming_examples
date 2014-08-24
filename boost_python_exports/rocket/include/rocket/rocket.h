@@ -20,6 +20,8 @@ class Rocket {
   void setInertiaMatrix(const Eigen::Matrix2d& inertia_matrix);
   Eigen::Matrix2d& getInertiaMatrix();
   const Eigen::Matrix2d& getInertiaMatrix() const;
+  
+  virtual std::string name() const = 0;
  private:
   double max_speed_;
   Eigen::Matrix2d inertia_matrix_;
@@ -36,7 +38,8 @@ class Booster : public Rocket {
 
   unsigned getNumBoosts() const;
   void setNumBoosts(unsigned nb);
-  
+
+  virtual std::string name() const;  
  private:
   unsigned num_boosts_;
 };
