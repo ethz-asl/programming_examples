@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(example_package_python)
 
 find_package(catkin_simple REQUIRED)
-catkin_simple()
+catkin_simple(ALL_DEPS_REQUIRED)
 
 find_package(Boost REQUIRED COMPONENTS system)
 include_directories(${Boost_INCLUDE_DIRS})

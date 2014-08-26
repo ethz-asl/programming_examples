@@ -23,7 +23,7 @@ int main(int /*argc*/, char** /*argv*/) {
     
   } catch (const std::exception& e) {
     SM_FATAL_STREAM(e.what());
-    SM_INFO("I cought an exception. In a real program you probably do not want to continue. Here we do to show some other examples.");
+    SM_INFO("I caught an exception. In a real program you probably do not want to continue. Here we do to show some other examples.");
   }
   
   exampleClass.initialize(1.0, 2.0);

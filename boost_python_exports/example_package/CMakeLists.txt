@@ -8,7 +8,7 @@ project(example_package) # NOTE: It's IMPORTANT to specify the same name as in y
 # The next two lines are REQUIRED. 
 # They will get the include and linker flags from your dependencies and include the include directory in your current package.
 find_package(catkin_simple REQUIRED)
-catkin_simple()
+catkin_simple(ALL_DEPS_REQUIRED)
 
 # The next two lines are OPTIONAL. Use it in case you have dependencies to boost.
 find_package(Boost REQUIRED COMPONENTS system)
