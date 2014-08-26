@@ -37,7 +37,7 @@ void exportExampleClass() {
     // Let's define b in a way that it appears as a member in python, but actually we use the setter and getter methods underneath
     // We have to excplicitly define the function type for getB since there are two overloaded methods and boost python does not know which to choose otherwise
     // We use make_function here because we have to specify a return value policy
-    .add_property("b", make_function((const double& (ExampleClassBase::*)(void) const)&ExampleClassBase::getB, return_value_policy<copy_const_reference>()), &ExampleClassBase::setB, "b member variable")
+    .add_property("b", make_function((const double& (ExampleClassBase::*)(void) const)&ExampleClassBase::getB, return_value_policy<copy_const_reference>()), &ExampleClassBase::setB, "double b: member variable")
 
     // we can also expose the getB() method as a function to python
     // Again we have to excplicitly define the function type for getB since there are two overloaded methods and boost python does not know which to choose otherwise
@@ -61,7 +61,7 @@ void exportExampleClass() {
     // And the one taking the Eigen vector
     .def(init<Eigen::Vector2d>("ExampleClass(const Eigen::Vector2d vec): Constructor taking an array [a,b] as argument. Use a numpy 2d array here."))
   
-    .add_property("a", make_function((const double& (ExampleClass::*)(void) const)&ExampleClass::getA, return_value_policy<copy_const_reference>()), &ExampleClass::setB)
+    .add_property("a", make_function((const double& (ExampleClass::*)(void) const)&ExampleClass::getA, return_value_policy<copy_const_reference>()), &ExampleClass::setB, "double a: member variable")
     
     // We use the above created overloads to deal with default arguments
     .def("initialize", &ExampleClass::initialize, ExampleClass_initialize_overloads("bool initialize(double a, double b=0.0): Initializes the class. Use this method after constructing with default constructor!"))
