@@ -21,7 +21,7 @@ BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(ExampleClass_initialize_overloads, Exampl
  */
 inline std::string exampleClassToStringWrapper(const ExampleClass& e) {
   std::ostringstream ss;
-  ss << e.getB(); // NOTE: we have already defined the stream operator for this class
+  ss << e; // NOTE: we have already defined the stream operator for this class
   return ss.str();
 }
 
