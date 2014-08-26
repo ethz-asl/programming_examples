@@ -1,4 +1,8 @@
 #include <boost/python.hpp>
+
+// NOTE: IMPORTANT: It is crucual that you include this header if you use Eigen matrices that you want to export
+#include <numpy_eigen/boost_python_headers.hpp>
+
 #include <boost/shared_ptr.hpp>
 #include <example_package/ExampleClass.hpp>
 
