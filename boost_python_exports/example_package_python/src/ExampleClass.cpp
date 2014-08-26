@@ -20,11 +20,9 @@ BOOST_PYTHON_MEMBER_FUNCTION_OVERLOADS(ExampleClass_initialize_overloads, Exampl
  * @return string version of this class
  */
 inline std::string exampleClassToStringWrapper(const ExampleClass& e) {
-
   std::ostringstream ss;
-  ss << "[" << e.getA() << "," << e.getB() << "]";
+  ss << e.getB(); // NOTE: we have already defined the stream operator for this class
   return ss.str();
-  
 }
 
 void exportExampleClass() {

@@ -33,7 +33,7 @@ target_link_libraries(${PROJECT_NAME}
 cs_add_executable(${PROJECT_NAME}_node
   src/ExampleProgram.cpp
 )
-# Since the executable uses the ExampleClass class we compiles into a library, we have to link against it here
+# Since the executable uses the ExampleClass class that we compiled into a library, we have to link against it here
 target_link_libraries(${PROJECT_NAME}_node 
   ${PROJECT_NAME}
 )
@@ -43,7 +43,7 @@ target_link_libraries(${PROJECT_NAME}_node
 #############
 
 # This will install headers located in include folder and all libraries and executables 
-# you specified with cs_add_library() and cs_add_executable() insto your install folder
+# you specified with cs_add_library() and cs_add_executable() into your install folder
 cs_install()
 
 # Install launch files
@@ -65,7 +65,7 @@ cs_export()
 #############
 
 # It is highly RECOMMENDED to write unit tests. 
-# Unit tests are a convenient way to determine whether your code wors as expected.
+# Unit tests are a convenient way to determine whether your code works as expected.
 
 # Add gtest based cpp test target and link libraries against your project.
 catkin_add_gtest(${PROJECT_NAME}-test

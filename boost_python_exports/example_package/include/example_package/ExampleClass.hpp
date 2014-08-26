@@ -1,6 +1,8 @@
 #ifndef EXAMPLE_CLASS_HPP_
 #define EXAMPLE_CLASS_HPP_
 
+#include <iostream> // for ostream
+
 #include <boost/shared_ptr.hpp>
 #include <Eigen/Dense>
 
@@ -117,6 +119,9 @@ namespace example {
       double m_a; /// @brief Double member
     
   }; /* class ExampleClass */
+  
+  // Since this is an inlined method, it's definition goes into ../include/example_class/implementation/ExampleClassImplementation.hpp
+  inline std::ostream& operator<<(std::ostream& os, const ExampleClass& c);
 
 } /* namespace example */
 

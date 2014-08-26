@@ -40,6 +40,17 @@ namespace example {
     // Explicitely cast m_a to type T. Compiler will raise an error if that is not possible, e.g. if T is std::string.
     return (T)m_a;
   }
+  
+  /**
+   * @brief Defines stream operator for ExampleClass
+   * @param os stream
+   * @param c ExampleClass object
+   * @return Modified stream now containing description of c
+   **/
+  inline std::ostream& operator<<(std::ostream& os, const ExampleClass& c) {
+    os << "[" << c.getA() << "," << c.getB() << "]";
+    return os;
+  }
 
 } /* namespace example */
 

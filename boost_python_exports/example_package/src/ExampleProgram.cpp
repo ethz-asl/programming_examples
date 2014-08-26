@@ -1,3 +1,5 @@
+#include <stdlib.h>     /* system */
+
 #include <example_package/ExampleClass.hpp>
 
 #include <sm/logging.hpp>
@@ -11,7 +13,7 @@ using namespace example;
 // warning: unused parameter `argc' [-Wunused-parameter]
 int main(int /*argc*/, char** /*argv*/) {
   
-  SM_INFO_STREAM("Hi, I am a simple example program");
+  SM_INFO_STREAM("Hi, I am a simple example program using the ExampleClass.");
 
   ExampleClass exampleClass; // Not initialized yet
   
@@ -27,13 +29,15 @@ int main(int /*argc*/, char** /*argv*/) {
   }
   
   exampleClass.initialize(1.0, 2.0);
-  SM_INFO_STREAM("Example class initialized, now a=" << exampleClass.getA() << " and b=" << exampleClass.getB());
+  SM_INFO_STREAM("Example class initialized: a = " << exampleClass); // This uses the custom stream operator
   
-  // TODO
-//   sm::PropertyTree propertyTree;
-//   propertyTree.loadInfo()
-//   exampleClass.initializeWithPropertyTree();
-  
+  // TODO: Initialize with a property tree, how to get path to file?
+//   i=system("rospack find example_package");
+//   boost::filesystem::path configFile();
+//   sm::BoostPropertyTree propertyTree;
+//   propertyTree.loadInfo(configFile);
+//   exampleClass.initializeWithPropertyTree(propertyTree);
+//   SM_INFO_STREAM("I initialized the ExampleClass with the property tree, now Example class is: " << exampleClass); // This uses the custom stream operator
   
   SM_INFO_STREAM("Example program terminated successfully");
   return 0;
