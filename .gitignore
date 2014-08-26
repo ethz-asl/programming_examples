@@ -1,1 +1,54 @@
-*~
+# Compiled Object files
+*.slo
+*.lo
+*.o
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# python
+*.pyc
+
+# ros bag files
+*.bag
+
+# Eclipse files
+.project
+.pydevproject
+.settings
+
+#svn files
+.svn
+
+#callgrind files
+*callgrind*
+
+# misc
+*.prof
+*.gv
+*.dot
+
+#images
+*.png
+*.pdf
+*.bmp
+*.jpg
+*.jpeg
+
+#python pickle
+*.pickle
+
+#trash
+*.*~
+*.bak
+cmake_install.cmake
+_gtest_from_src
+.ctagsdb
+CMakeFiles
+CMakeCache.txt
