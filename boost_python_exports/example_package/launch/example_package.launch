@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<!-- You can conveniently call "roslaunch example_package example_package.launch" to run your executable -->
+
+<launch>
+    <node type="example_package_node" pkg="example_package" name="example_package_node" output="screen" respawn="true" args=""/>
+</launch>

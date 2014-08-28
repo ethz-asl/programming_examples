@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package>
+  <name>example_package_python</name>
+  <version>0.0.0</version>
+  <description>The example_package_python package</description>
+
+  <!-- One maintainer tag REQUIRED, multiple allowed, one person per tag --> 
+  <maintainer email="your.name@ethz.ch">Your Name</maintainer>
+
+  <!-- One license tag REQUIRED, multiple allowed, one license per tag -->
+  <license>TODO</license>
+
+  <!-- Author tags are OPTIONAL, mutiple are allowed, one per tag -->
+  <author email="your.name@ethz.ch">Your Name</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <buildtool_depend>catkin_simple</buildtool_depend>
+
+  <!--You need this package because you want to export its code to python-->
+  <build_depend>example_package</build_depend>
+  
+  <!--You need this for every package where you want to export python bindings-->
+  <build_depend>python_module</build_depend>
+
+  <!--you only need this for packages where you want to have automatic numpy array to Eigen matrix conversion-->
+  <build_depend>numpy_eigen</build_depend>
+
+  <!-- Use run_depend for packages you need at runtime: -->
+  <run_depend>example_package</run_depend>
+  <run_depend>numpy_eigen</run_depend>
+  <run_depend>python_module</run_depend>
+  
+  <test_depend>gtest</test_depend>
+
+</package>

@@ -26,15 +26,21 @@ Add setup.bash to your bashrc:
 echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc
 ```
 
-# Building packages
+# Building this package
 ``` bash
 cd ~/catkin_ws
 catkin build
 ```
 
-# Compile and run the unit test
+# Run the unit test
 ``` bash
-catkin build --catkin-make-args run_tests
+catkin build example_package --catkin-make-args run_tests
+```
+
+or
+
+``` bash
+catkin build example_package_python --catkin-make-args run_tests
 ```
 
 # Student templates
