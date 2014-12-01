@@ -5,6 +5,7 @@ This package contains code snippets for everday tasks and demonstrates the usage
 
 # Install pre-requisites
 ``` bash
+sudo apt-get install python-pip
 sudo pip install catkin-tools 
 sudo apt-get install python-rosinstall
 ```
@@ -17,8 +18,9 @@ cd ~/catkin_ws/src
 rosws init
 // Add repositories to workspace
 rosws set Schweizer-Messer https://github.com/ethz-asl/Schweizer-Messer --git
+// ... and more
 rosws update
-catkin_init_workspace
+catkin config
 ```
 
 Add setup.bash to your bashrc:
@@ -27,12 +29,22 @@ echo 'source ~/catkin_ws/devel/setup.bash' >> ~/.bashrc
 ```
 
 # Building packages
+You have to be in your catkin workspace to execute the ```catkin build``` command:
 ``` bash
 cd ~/catkin_ws
-catkin build
+catkin build <package_name>
+```
+You can set up a convenient alias in your .basrc to avoid the required directory change. Add this line to your .bashrc:
+``` bash
+alias catkin_build='catkin build --workspace /path/to/your/catkin_ws'
 ```
 
-# Compile and run the unit test
+# Useful catkin build options
+``` bash
+catkin build --force-cmake <package_name> -DCMAKE_BUILD_TYPE=Release
+```
+
+# Compile and execute the unit test
 ``` bash
 catkin build --catkin-make-args run_tests
 ```
