@@ -25,8 +25,17 @@ inline std::string exampleClassToStringWrapper(const ExampleClass& e) {
   return ss.str();
 }
 
+Eigen::VectorXd getABWrapper(const ExampleClass& e) {
+  Eigen::VectorXd vec(2,1);
+  vec << e.getA(), e.getB();
+  return vec;
+}
+
 void exportExampleClass() {
   
+  // We can also wrap normal functions. Here is one that returns a,b as a numpy array (by means of the automatic conversion of numpy_eigen)
+  def("getABAsVector", &getABWrapper);
+      
   // The class ExampleClassBase is not constructible because of the pure virtual function printHello. Thus we do not create a constructor with no_init
   class_<ExampleClassBase, ExampleClassBase::Ptr, boost::noncopyable>("ExampleClassBase", "Description of ExampleClassBase", no_init)
     
