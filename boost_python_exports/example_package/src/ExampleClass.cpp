@@ -118,7 +118,7 @@ namespace example {
    * @brief  Constructor that takes a property tree (convenient to write configuration files)
    * @param propertyTree Property tree from sm_property_tree package
    */
-  ExampleClass::ExampleClass(const sm::PropertyTree& propertyTree) :
+  ExampleClass::ExampleClass(const sm::ConstPropertyTree& propertyTree) :
     ExampleClassBase(),
     m_isInitialized(false), // NOTE: don't forget to set this flag to false in the beginning
     m_a(std::numeric_limits<double>::signaling_NaN()) {
@@ -171,7 +171,7 @@ namespace example {
    * @param propertyTree Should contain a and b
    * @return Was the initialization successful or not
    **/
-  bool ExampleClass::initializeWithPropertyTree(const sm::PropertyTree& propertyTree) {
+  bool ExampleClass::initializeWithPropertyTree(const sm::ConstPropertyTree& propertyTree) {
       double a = propertyTree.getDouble("/parameters/a"); // NOTE: will throw if value cannot be found
       double b = propertyTree.getDouble("/parameters/b", 2.0); // NOTE: You can specify default values, will not throw if parameter b cannot be found
       ExampleClass::initialize(a,b);

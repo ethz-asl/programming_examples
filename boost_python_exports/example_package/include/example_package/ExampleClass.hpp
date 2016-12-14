@@ -82,14 +82,14 @@ namespace example {
       ExampleClass(const Eigen::Vector2d vec);
 
       // Constructor that takes a property tree (convenient to write configuration files)
-      ExampleClass(const sm::PropertyTree& propertyTree);
+      ExampleClass(const sm::ConstPropertyTree& propertyTree);
       
       // Destructor
       ~ExampleClass();
       
       // Initialization method in case the default constructor was used
       bool initialize(double a, double b=0.0);
-      bool initializeWithPropertyTree(const sm::PropertyTree& propertyTree);
+      bool initializeWithPropertyTree(const sm::ConstPropertyTree& propertyTree);
       
       // getters
       // NOTE: Consider writing getters and setters for all members instead of making them public
