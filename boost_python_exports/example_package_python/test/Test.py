@@ -15,5 +15,4 @@ class TestConstruction(unittest.TestCase):
         self.assertEqual(exampleClass.b, 0.2)
 
 if __name__ == '__main__':
-    import rostest
-    rostest.rosrun('example_package_python', 'Construction', TestConstruction)
+    unittest.main()
