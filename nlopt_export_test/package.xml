@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<package>
+  <name>nlopt_export_test</name>
+  <version>0.0.0</version>
+  <description>The example_package package</description>
+
+  <!-- One maintainer tag REQUIRED, multiple allowed, one person per tag --> 
+  <maintainer email="youremail@ethz.ch">your name</maintainer>
+
+  <!-- One license tag REQUIRED, multiple allowed, one license per tag -->
+  <license>TODO</license>
+
+  <!-- ********************************************* -->
+  <!-- Use buildtool_depend for build tool packages: -->
+  <!-- ********************************************* -->
+  
+  <!-- catkin is part of your ROS installation -->
+  <buildtool_depend>catkin</buildtool_depend>
+  
+  <!-- Wrapper around catkin, simplifying a lot of things, you can get it here: https://github.com/catkin/catkin_simple -->
+  <buildtool_depend>catkin_simple</buildtool_depend>
+  
+  <!-- ******************************************************** -->
+  <!-- Use build_depend for packages you need at compile time: -->
+  <!-- ******************************************************** -->
+ 
+  <!-- Packages from Schweizer-Messer, you can get it here https://github.com/ethz-asl/Schweizer-Messer -->
+  <build_depend>nlopt</build_depend>  <!-- wrapper around famous linear algebra ibrary Eigen, you can get it here: https://github.com/ethz-asl/eigen_catkin-->
+
+  <test_depend>gtest</test_depend>
+
+</package>

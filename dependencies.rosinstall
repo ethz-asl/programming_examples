@@ -7,3 +7,7 @@
 - git:
    local-name: Schweizer-Messer
    uri: https://github.com/ethz-asl/Schweizer-Messer
+- git:
+   local-name: nlopt
+   uri: https://github.com/ethz-asl/nlopt
+   version: fix/include-dir
